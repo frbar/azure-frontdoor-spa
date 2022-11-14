@@ -36,7 +36,7 @@ Remove-Item publish.zip
 
 # Get the Azure Front Door endpoint
 
-And note it for late.
+And note it for later reference.
 
 ```powershell
 az afd endpoint list -g $rgName --profile-name "$($envName)-afd" --query [0].hostName
