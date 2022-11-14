@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Azure PoC - Hosting SPA and API backend behind Azure Front Door</title>
+</head>
+
+<body>
+    <p>Hello :)</p>
+    <p id="weather-forecast"></p>
+
+    <script>
+        fetch('/api/weather-forecast')
+        .then((response) => response.json())
+        .then((data) => document.getElementById('weather-forecast').innerHTML = data[0].date);
+    </script>
+</body>
+
+</html>
