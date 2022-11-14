@@ -12,7 +12,7 @@
     <script>
         fetch('/api/weather-forecast')
         .then((response) => response.json())
-        .then((data) => document.getElementById('weather-forecast').innerHTML = data);
+        .then((data) => document.getElementById('weather-forecast').innerHTML = data[0].date);
     </script>
 </body>
 
