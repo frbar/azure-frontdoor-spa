@@ -168,6 +168,7 @@ resource appService 'Microsoft.Web/sites@2020-06-01' = {
   }
   properties: {
     serverFarmId: appServicePlan.id
+    clientAffinityEnabled: false
     siteConfig: {
       linuxFxVersion: 'DOTNETCORE|6.0'
       appSettings: [
@@ -190,7 +191,7 @@ resource appService 'Microsoft.Web/sites@2020-06-01' = {
           }
           name: 'Allow traffic from Front Door'
         }
-      ]
+      ]      
     }
   }
 }
