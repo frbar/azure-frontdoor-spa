@@ -13,12 +13,14 @@ Bicep template is to be run from your local. Deployment of the SPA is to be done
 
 ```powershell
 $subscription = "Training Subscription"
+
+az login
+az account set --subscription $subscription
+
 $rgName = "frbar-fd-spa-api"
 $envName = "frbarfdspapoc"
 $location = "France Central"
 
-az login
-az account set --subscription $subscription
 az group create --name $rgName --location $location
 az deployment group create --resource-group $rgName --template-file infra.bicep --mode complete --parameters envName=$envName
 ```
